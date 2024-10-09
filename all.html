@@ -204,7 +204,8 @@
             intercomData = $.csv.toObjects(data, {separator: ";"});
             intercomData = intercomData.map(row => ({
                 surname: row.COGNOME,
-                intercom: row.CITOFONO
+                intercom: row.CITOFONO,
+                palazzina: row.PAL
             }));
             renderList();
         }
