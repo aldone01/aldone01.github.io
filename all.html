@@ -235,7 +235,7 @@
             listElement.empty();
             filteredData.forEach(item => {
                 listElement.append(`
-                    <div class="intercom-item" onclick="showPopup('${item.surname}', '${item.intercom}')">
+                    <div class="intercom-item" onclick="showPopup('${item.surname}', '${item.intercom}', '${item.palazzina}')">
                         <span>${item.surname}</span>
                         <span>${item.intercom}</span>
                         <span>${item.palazzina}</span>
@@ -244,7 +244,7 @@
             });
         }
 
-        function showPopup(surname, intercom) {
+        function showPopup(surname, intercom, palazzina) {
             $('#popupSurname').text(surname);
             $('#popupIntercom').text('Citofono: ' + intercom);
             $('#popupPalazzina').text(palazzina);
