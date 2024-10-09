@@ -217,7 +217,8 @@
             const searchTerm = $('#searchInput').val().toLowerCase();
             const filteredData = intercomData.filter(item =>
                 item.surname.toLowerCase().includes(searchTerm) ||
-                item.intercom.includes(searchTerm)
+                item.intercom.includes(searchTerm) ||
+                item.palazzina.includes(searchTerm)
             );
 
             filteredData.sort((a, b) => {
